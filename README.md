@@ -7,9 +7,10 @@ at /volume1/docker/cvat/cvat/apps/iam$ vim urls.py
 sudo docker-compose -p cvat-lgii -f docker-compose.yml -f docker-compose.override.yml down
 sudo docker-compose -p cvat-lgii -f docker-compose.yml -f docker-compose.override.yml up -d   
 ```
-# https://github.com/cvat-ai/cvat/pull/6322 
-# solved CSRF make CVAT trust host origin by adding synology proxy ip to trustedips
-# add local-settings.py
+
+> https://github.com/cvat-ai/cvat/pull/6322 
+> solved CSRF make CVAT trust host origin by adding synology proxy ip to trustedips
+> add local-settings.py
 
 SITE_ID = 2 overwritten from local-settings.py (base.py => defines the default to example.com site)
 
