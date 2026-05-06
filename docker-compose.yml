@@ -94,6 +94,7 @@ services:
     environment:
       <<: [*backend-env, *clickhouse-env]
       DJANGO_MODWSGI_EXTRA_ARGS: ''
+      EMAIL_PASSWORD: ${EMAIL_PASSWORD}
       ALLOWED_HOSTS: '*'
       ADAPTIVE_AUTO_ANNOTATION: 'false'
       NUMPROCS: 2

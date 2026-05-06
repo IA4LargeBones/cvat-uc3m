@@ -1,3 +1,22 @@
+# UC3M FORK README
+Remove user sign up issue: https://github.com/cvat-ai/cvat/pull/7348  
+at /volume1/docker/cvat/cvat/apps/iam$ vim urls.py
+- known issue: removing it from backend makes it impossible for users to register even from direct email invitations. Create issue for CVAT to allow invitation only or directly modify the UI to hide registering -> problem is that url to register will be an open endpoint so a savy user could register anyways.
+
+```shell
+sudo docker-compose -p cvat-lgii -f docker-compose.yml -f docker-compose.override.yml down
+sudo docker-compose -p cvat-lgii -f docker-compose.yml -f docker-compose.override.yml up -d   
+```
+# https://github.com/cvat-ai/cvat/pull/6322 
+# solved CSRF make CVAT trust host origin by adding synology proxy ip to trustedips
+# add local-settings.py
+
+SITE_ID = 2 overwritten from local-settings.py (base.py => defines the default to example.com site)
+
+
+
+
+
 <p align="center">
   <img src="/site/content/en/images/cvat-readme-gif.gif" alt="CVAT Platform" width="100%" max-width="800px">
 </p>
