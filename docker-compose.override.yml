@@ -1,0 +1,11 @@
+services:
+    cvat_server:
+      environment:
+        DJANGO_SETTINGS_MODULE: settings
+      volumes:
+        - ./local-settings.py:/home/django/settings.py:ro
+        - ./cvat:/home/django/cvat:ro
+    cvat_ui:
+      volumes:
+        - ./cvat-ui:/home/django/cvat-ui:ro
+
